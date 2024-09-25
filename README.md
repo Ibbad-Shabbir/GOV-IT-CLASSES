@@ -139,13 +139,11 @@ Creating a component is fairly easy and it requires little to no effort if you k
 	const NavBar = () => {
 
 	return (
-	<div>
-		<div className="py-24 px-0 bg-white">
-			<div className="flex justify-end p-12">
-				<Link  className="underline-none font-bold text-[#1e1e1e]" href='/'> Home </Link>
-				<Link  className="underline-none font-bold text-[#1e1e1e]" href='/about'> About </Link>
-				<Link  className="underline-none font-bold text-[#1e1e1e]" href='/jobs'> Jobs </Link> 
-			</div>
+	<div className="py-12 px-0 bg-white">
+		<div className="flex justify-start">
+			<Link  className="underline-none font-bold text-[#1e1e1e] px-12" href='/'> Home </Link>
+			<Link  className="underline-none font-bold text-[#1e1e1e] px-12" href='/about'> About </Link>
+			<Link  className="underline-none font-bold text-[#1e1e1e] px-12" href='/jobs'> Jobs </Link> 
 		</div>
 	</div>
 	);
