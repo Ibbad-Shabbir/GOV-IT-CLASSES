@@ -96,3 +96,76 @@ export default function AboutPage() {
 	);
 }
 ```
+
+### 🔗 Routing Using Links
+`Next.js` Provides the Programmers with a predifined function known as **Link** it is used to link two pages together seamlessly one example is:
+
+```javascript
+import Link from 'next/link'
+
+export default function Home() {
+	return (
+		<div>
+		<div className="py-24 px-0 bg-white">
+		<div className="flex justify-end p-12">
+		<Link  className="underline-none font-bold text-[#1e1e1e]" href='/about'> About </Link> 
+		</div>
+		</div>
+		</div>
+	);
+}
+```
+
+In this Example, We've created a Navbar with a Link `About` If someone we're to click this Link they would'be redirected to the About Page
+
+# ⛓ Components
+Components in `NEXT.JS` are a crucial thing to know about. It is imperetive for a programmer to think of the best solution hence, Repeating same block of code again and again across multiple pages can be hectic, they would look unclean, and it would not make you look professional to create a component, Follow the following steps
+
+#### 1. Create a folder
+Create a folder in the `src` folder called `Componenets`. Your folder structure should look something like this:
+```shell
+📂 src
+	📁 Components
+```
+#### 2. Create a component
+Creating a component is fairly easy and it requires little to no effort if you know what you're doing. One example of a component is:
+
+``` JavaScript
+	// Navbar.tsx
+
+	import Link from 'next/link';
+
+	const NavBar = () => {
+
+	return (
+	<div>
+		<div className="py-24 px-0 bg-white">
+		<div className="flex justify-end p-12">
+		<Link  className="underline-none font-bold text-[#1e1e1e]" href='/'> Home </Link>
+		<Link  className="underline-none font-bold text-[#1e1e1e]" href='/about'> About </Link>
+		<Link  className="underline-none font-bold text-[#1e1e1e]" href='/jobs'> Jobs </Link> 
+		</div>
+		</div>
+		</div>
+	)
+	}
+
+	export default NavBar;
+```
+
+#### 2. Importing the component and using it
+
+Congratulations on creating your first component, But how to use it?. To use the component in your whole application you can do this:
+
+```javaScript
+import Link from 'next/link'
+import { NavBar } from '../components/NavBar';
+
+export default function Home() {
+	return (
+		<div>
+			<NavBar />
+		</div>
+	);
+
+```
